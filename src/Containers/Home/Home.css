@@ -1,0 +1,22 @@
+#button-place{
+    padding-top: 5%;
+    margin: auto;
+    margin: 0;
+    top: 50%;
+    left: 50%;
+}
+
+.profil-btn{
+    background:url(/public/Images/perso.jpg) no-repeat;
+    cursor:pointer;
+    border:none;
+    height: 225px;
+}
+
+.perso-btn{
+    background:url(/public/Images/profil.png) no-repeat;
+    cursor:pointer;
+    border:none;
+    height: 225px;
+
+}

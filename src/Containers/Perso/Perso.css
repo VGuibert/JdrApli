@@ -10,3 +10,21 @@
     padding-top: 3.5%;
     height: 100%;
 }
+
+.p-top{
+    padding-top: 3%;
+}
+
+.backButtonEnd{
+    text-align: end;
+}
+
+.ButtonSb{
+    height: 65px;
+    width: 100px;
+}
+
+.backButton{
+    padding-top: 3%;
+    text-align: end;
+}

@@ -3,13 +3,11 @@ import './footer.css'
 
 function footer() {
   return (
-    <div>
-      <footer className="bg-dark text-center text-white fixed-bottom">
-        <div className="text-center text-white p-4">
+    <footer className="bg-dark text-center text-white footer">
+      <div className="text-center text-white p-4">
         Dungeon and Dragon Application - Dev
-        </div>
-      </footer>
-    </div>
+      </div>
+    </footer>
   )
 }
 

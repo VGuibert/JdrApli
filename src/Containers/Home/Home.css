@@ -6,7 +6,7 @@
     left: 50%;
 }
 
-.profil-btn{
+.spell-btn{
     background:url(/public/Images/perso.jpg) no-repeat;
     cursor:pointer;
     border:none;
@@ -18,5 +18,13 @@
     cursor:pointer;
     border:none;
     height: 225px;
-
 }
+
+
+.item-btn{
+    background:url(/public/Images/item.jpg) no-repeat;
+    cursor:pointer;
+    border:none;
+    height: 225px;
+}
+

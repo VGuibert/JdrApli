@@ -1,10 +1,13 @@
 import React from 'react'
 import './Perso.css';
+import { Link, useHistory, useNavigate } from "react-router-dom";
+
 
 function PersoCreate() {
+  const navigate = useNavigate();
   return (
     <div className="container">
-      <div className="row">
+      <div className="row p-top">
         <div className="col-md">
           <form action="http://localhost:3001/PostPerso" method="POST">
             <div className="form-group">
@@ -39,8 +42,13 @@ function PersoCreate() {
                 <label>Le lore de ton personnage</label>
                 <textarea  className="form-control" name="lore" placeholder="Ton Lore"/>
             </div>
-            <input type="submit" value="Submit"/>
+            <div className='p-top' >
+              <input className='btn btn-outline-success ButtonSb' type="submit" value="Submit"/>
+            </div>
           </form>
+          <div className='backButtonEnd'>
+            <button className='ButtonSb btn btn-outline-danger' onClick={() => navigate(-1)}>Cancel</button>
+          </div>
         </div>
       </div>
     </div>

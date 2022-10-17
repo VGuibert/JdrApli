@@ -2,7 +2,7 @@ import React from 'react'
 import './header.css'
 import { Link } from "react-router-dom"
 
-function Header() {
+export const Header = () =>  {
   return (
     <header className="p-3 bg-dark text-white">
       <div className="container">
@@ -12,6 +12,4 @@ function Header() {
       </div>
     </header>
   )
-}
-
-export default Header
+};

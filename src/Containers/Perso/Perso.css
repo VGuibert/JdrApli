@@ -28,3 +28,17 @@
     padding-top: 3%;
     text-align: end;
 }
+
+.rdiv{
+    width: 25%;
+}
+
+.newpersodiv{
+    width: 50%;
+    padding-bottom: 3%;
+}
+
+.newcolumn{
+    width: 25%;
+    float: left;
+}

@@ -2,7 +2,7 @@ import React from 'react'
 import './Home.css';
 import { Link } from "react-router-dom";
 
-function Home() {
+export const Home = () => {
   
   return (
     <div className="container scale">
@@ -28,6 +28,4 @@ function Home() {
       </div>
     </div>
   )
-}
-
-export default Home
+};

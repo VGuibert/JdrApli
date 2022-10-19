@@ -42,3 +42,15 @@
     width: 25%;
     float: left;
 }
+
+.infoPerso{
+    width: 80%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    text-align: center;
+}
+
+.borderPerso{
+    padding-left: 3%;
+    padding-right: 3%;
+}

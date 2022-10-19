@@ -3,6 +3,22 @@ import React, {useState, useEffect} from 'react'
 import { Link, useParams } from 'react-router-dom';
 import './Perso.css';
 
+function DeleteCara (e, Params){
+
+  e.preventDefault();
+
+  var requestOptions = {
+    method: 'DELETE',
+    redirect: 'follow'
+  };
+  
+  fetch("http://192.168.1.20:3001/DeletePerso?Name=" + Params , requestOptions)
+    .then(response => response.text())
+    .then(result => console.log(result))
+    .catch(error => console.log('error', error));
+
+}
+
 export const FichePerso = () => {
 
     const {Name} = useParams();
@@ -17,31 +33,37 @@ export const FichePerso = () => {
             setPerso(responseData.data[0])
             console.log(PersoName)
           })
-      }, [])  
-
+      }, []) 
  
   return (
     <div className="container">
-        <div className='row'>
-            <div className='PersoF'>
-                <div className='PersoName'>
-                    {PersoName.Name}
+      <div className='row infoPerso'>
+        <div className='col border border-dark borderPerso'>
+          {PersoName.Name}
+        </div>
+        <div className='col border border-dark'>
+            <div className='row'>
+                <div className='col'>
+                  {PersoName.Level}
                 </div>
-                <div className='PersoLevel'>
-                    {PersoName.Level}
+                <div className='col'>
+                  {PersoName.Classe}
                 </div>
-                <div className='PersoRace'>
-                    {PersoName.Race}
-                </div>
-                <div className='PersoClasse'>
-                    {PersoName.Classe}
-                </div>
-                <div className='PersoLore'>
-                    {PersoName.Lore}
+                <div className='col'>
+                  {PersoName.Race}
                 </div>
             </div>
         </div>
+      </div>
+      <div>
+        <div className='PersoLore'>
+          {PersoName.Lore}
+        </div>
+      </div>
       <div className="row">
+        <div>
+          <button className="btn btn-danger" onClick={(e) => DeleteCara(e, PersoName.Name)}>Delete</button>
+        </div>
         <div className="backButton">
             <Link className="btn btn-outline-info backButton" to="/perso">Back</Link>
         </div>
@@ -49,3 +71,5 @@ export const FichePerso = () => {
     </div>
   )
 };
+
+
